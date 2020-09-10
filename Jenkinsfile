@@ -8,7 +8,27 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hello world!' 
+                echo 'Building!' 
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing!' 
+            }
+        }
+        stage('Package') {
+            steps {
+                echo 'Packaging!' 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying!' 
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Releasing!' 
             }
         }
     }
