@@ -5,6 +5,7 @@
  */
 pipeline {
     agent any 
+    options { SumoPipelineLogCollection() }
     stages {
         stage('build') {
             steps {
