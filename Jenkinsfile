@@ -6,29 +6,43 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                echo 'Building!' 
+                echo 'Building'
             }
         }
-        stage('Test') {
+        stage('unit-test') {
             steps {
-                echo 'Testing!' 
+                echo 'Testing' 
             }
         }
-        stage('Package') {
+        stage('package') {
             steps {
-                echo 'Packaging!' 
+                echo 'Packaging' 
             }
         }
-        stage('Deploy') {
+        stage('deploy-to-qa') {
             steps {
-                echo 'Deploying!' 
+                echo 'Deploying to QA' 
             }
         }
-        stage('Release') {
+        stage('ui-tests') {
             steps {
-                echo 'Releasing!' 
+                echo 'Runing UI Tests' 
+            }
+        }
+        stage('deploy-to-stage') {
+            steps {
+                echo 'Deploying to Staging' 
+            }
+        }
+        stage('performance-tests') {
+            steps {
+                echo 'Running performance tests' 
+            }
+        }stage('deploy-to-production') {
+            steps {
+                echo 'Deploying to Production' 
             }
         }
     }
