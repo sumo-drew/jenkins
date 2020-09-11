@@ -40,7 +40,8 @@ pipeline {
             steps {
                 echo 'Running performance tests' 
             }
-        }stage('deploy-to-production') {
+        }
+        stage('deploy-to-production') {
             steps {
                 echo 'Deploying to Production' 
             }
